@@ -1,5 +1,5 @@
 1. Markdown
-2. # RESTful API Activity - Jake Romar i, Sescar
+2. # RESTful API Activity - Jake Romar I, Sescar
 3. ## Best Practices Implementation
 
 **1. Environment Variables:**
