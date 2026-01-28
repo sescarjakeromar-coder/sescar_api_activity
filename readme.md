@@ -1,7 +1,8 @@
+1. Markdown
+2. # RESTful API Activity - Jake Romar i, Sescar
+3. ## Best Practices Implementation
 
-
-
-**. Environment Variables:**
+**1. Environment Variables:**
 - Why did we put `BASE_URI` in `.env` instead of hardcoding it?
  - Answer: We placed BASE_URI in the .env file so that it is not directly written inside the source code. This is safer because important configuration details are not exposed, especially when the project is uploaded to GitHub or shared with others.
 
