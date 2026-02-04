@@ -1,32 +1,24 @@
-const rooms = [
-{
-    id: 101,
-    type: 'Single',
-    price: 100,
-    isBooked: false,
-    feature: ['Wi-fi', 'TV'],
-},
-{
-    id: 102,
-    type: 'Double',
-    price: 150,
-    isBooked: true,
-    feature: ['Wi-fi', 'TV', 'Mini-Bar'],
-},
-{
-    id: 201,
-    type: 'Suite',
-    price: 300,
-    isBooked: false,
-    feature: ['Wi-fi', 'TV','Mini-Bar', 'Jacuzzi'],
-},
-{
-    id: 101,
-    type: 'Single',
-    price: 100,
-    isBooked: false,
-    feature: ['Wi-fi'],
-},  
-];
+const mongoose = require('mongoose');
 
-module.exports = rooms;
+const roomSchema = new mongoose.Schema({
+  roomNumber: {
+    type: Number,
+    required: true,
+    unique: true,
+  },
+  type: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  isBooked: {
+    type: Boolean,
+    default: false,
+  },
+  features: [String],
+});
+
+module.exports = mongoose.model('Room', roomSchema);
