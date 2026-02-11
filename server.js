@@ -18,8 +18,12 @@ const BASE_URI = process.env.BASE_URI || '/api/v1';
 // Routes
 const apiRoutes = require('./src/routes/apiRoutes');
 app.use(process.env.BASE_URI, apiRoutes);
+const guestApiRoutes = require('./src/routes/guestApiRoutes');
+app.use(process.env.BASE_URI, guestApiRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Base URI: http://localhost:${PORT}${BASE_URI}`);
+  console.log(`Rooms API: http://localhost:${PORT}${BASE_URI}/rooms`);
+  console.log(`Guests API: http://localhost:${PORT}${BASE_URI}/guests`);
 });
